@@ -1,55 +1,115 @@
 <header>
-  <h2 class="header__title">
-    {{ shop.name | link_to: routes.root_url }}
-  </h2>
-
-  <div class="header__menu">
-    {% for link in section.settings.menu.links %}
-      {{ link.title | link_to: link.url }}
-    {% endfor %}
-  </div>
-
-  <div class="header__icons">
-    {% if shop.customer_accounts_enabled %}
-      {{ 'icon-account.svg' | inline_asset_content | link_to: routes.account_url }}
-    {% endif %}
-
-    <a href="{{ routes.cart_url }}">
-      {% if cart.item_count > 0 %}
-        <sup>{{ cart.item_count }}</sup>
-      {% endif %}
-
-      {{ 'icon-cart.svg' | inline_asset_content }}
-    </a>
-  </div>
+  <div class="navbar">
+        <div class="nav-left">
+            <div class="nav-left-left">
+                <p class="inr">₹ INR</p>
+                <img src="{{ 'search.png' | asset_url }}" alt="" class="search-icon" width="20px" height="20px">
+            </div>
+            <div class="nav-left-right">
+                <ul>
+                    <li>Womenswear</li>
+                    <li>Menswear</li>
+                    <li>Collections</li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo-cont">
+            <img src="{{ 'Gold symbol embossed.png' | asset_url }}" alt="" class="logo" width="20px" height="20px">
+        </div>
+        <div class="nav-right">
+            <div class="nav-right-left">
+                <ul>
+                    <li>Accessories</li>
+                    <li>Zardoz Project</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="nav-right-right">
+                <div class="socials">
+                    <img src="{{ 'Vector (Stroke).png' | asset_url }}" alt="" width="20px" height="20px"><img src="{{ 'breb.png' | asset_url }}" alt="" width="20px" height="20px"><img src="{{ 'dbfd.png' | asset_url }}" alt="" width="20px" height="20px">
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 
 {% stylesheet %}
-  header {
-    height: 5rem;
+.navbar{
+  background-color: #130D0C;
+  max-width: 100%;
+  
+}
+  .ul {
+  list-style-type: none;
+  color: #FFEFD9;
+}
+
+
+.navbar {
+  display: flex;
+  max-width: 1920px;
+  min-height: 123px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+
+}
+.nav-left-left{
+  margin-left: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  header a {
-    position: relative;
-    text-decoration: none;
-    color: var(--color-foreground);
-  }
-  header a sup {
-    position: absolute;
-    left: 100%;
-    overflow: hidden;
-    max-width: var(--page-margin);
-  }
-  header svg {
-    width: 2rem;
-  }
-  header .header__menu,
-  header .header__icons {
+    gap: 20px;
+}
+
+.nav-left-left p{
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFEFD9;
+  font-size: 16px;
+}
+.nav-left-right ul, .nav-right-left ul{
+    list-style: none;
     display: flex;
-    gap: 1rem;
-  }
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    color: #FFEFD9;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.nav-right{
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.nav-right-right{
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.socials{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-cont img{
+  width: 60px;
+  height: 60px;
+}
+
 {% endstylesheet %}
 
 {% schema %}

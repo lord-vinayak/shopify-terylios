@@ -10,11 +10,27 @@
 {
   "sections": {
     "main": {
-      "type": "hello-world",
+      "type": "hero",
+      "settings": {}
+    },
+    "hero-next": {
+      "type": "hero-next",
+      "settings": {}
+    },
+    "features": {
+      "type": "features",
+      "settings": {}
+    },
+    "products": {
+      "type": "products",
+      "settings": {}
+    },
+    "footer": {
+      "type": "footer",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "main", "hero-next", "features", "products", "footer"
   ]
 }

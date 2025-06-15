@@ -1,0 +1,165 @@
+<div class="features">
+  <img
+    src="{{'image5.png'|asset_url}}"
+    class="img-border"
+    alt=""
+    width="auto"
+    height="auto" />
+  <div class="center-details">
+    <div class="feature-item">
+      <img
+        src="{{'Frame 1321315468.png'|asset_url}}"
+        alt=""
+        width="auto"
+        height="auto" />
+      <p>200+ Hours of Craftsmanship</p>
+    </div>
+    <div class="feature-item">
+      <img
+        src="{{'Frame 1321315466.png'|asset_url}}"
+        alt=""
+        width="auto"
+        height="auto" />
+      <p>Exquisite Zardosi Embroidery</p>
+    </div>
+    <div class="feature-item">
+      <img
+        src="{{'Frame 1321315467.png'|asset_url}}"
+        alt=""
+        width="auto"
+        height="auto" />
+      <p>
+        Heritage <br/>
+        Heirlooms
+      </p>
+    </div>
+  </div>
+  <img
+    src="{{'image6.png'|asset_url}}"
+    class="img-border"
+    alt=""
+    width="auto"
+    height="auto" />
+</div>
+
+<div class="video-row">
+  <video
+    autoplay
+    loop
+    muted
+    playsinline>
+    <source src="{{'0823.mp4'|asset_url}}" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <video
+    autoplay
+    loop
+    muted
+    playsinline>
+    <source src="{{'0824.mp4'|asset_url}}" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <video
+    autoplay
+    loop
+    muted
+    playsinline>
+    <source src="{{'0825.mp4'|asset_url}}" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<style>
+  .features::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url({{ 'kseniya-lapteva-GP2sJoqnuXI-unsplash1.png' | asset_url }}) center no-repeat;
+    background-size: cover;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .features::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url({{ 'e7c974ea08bf637d80afbce8a072be6bf4dde919.jpg' | asset_url }}) center no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+  }
+</style>
+
+
+
+{% stylesheet %}
+
+  .features {
+    max-width: 1920px;
+    max-height: 687px;
+    position: relative;
+    height: 487px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .img-border {
+    width: 100%;
+    display: block;
+  }
+
+  .center-details {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+  }
+
+  .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-item img {
+    width: 162px;
+  }
+
+  .feature-item p {
+    width: 310px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-family: "Times New Roman"
+    , Times
+    , serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffe6c0;
+    line-height: 1.4;
+    letter-spacing: 2px;
+  }
+
+  .video-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .video-row video {
+    flex: 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 9 / 16;
+  }
+
+{% endstylesheet %}

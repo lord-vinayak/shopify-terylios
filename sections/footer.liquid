@@ -1,57 +1,204 @@
-<footer>
-  <div class="footer__copyright">
-    &copy;
-    {{ 'now' | date: '%Y' }}
-    {{ shop.name | link_to: routes.root_url }}, {{ powered_by_link }}
+<div class="footer">
+  <div class="col-1">
+    <p class="lg-h">stay connected</p>
+    <div class="footer-text">
+      <ul>
+        <li>Subscribe to our newsletters</li>
+      </ul>
+      <div class="email">
+        <input type="email" placeholder="enter email" />
+        <button type="submit">sign up</button>
+      </div>
+      <div class="icons">
+        <div class="icon"><img
+            src="{{'instagram.png'| asset_url}}"
+            alt=""
+            width="auto"
+            height="auto" /></div>
+        <div class="icon"><img
+            src="{{'Facebook.png'| asset_url}}"
+            alt=""
+            width="auto"
+            height="auto" /></div>
+        <div class="icon"><img
+            src="{{'Twitter.png'| asset_url}}"
+            alt=""
+            width="auto"
+            height="auto" /></div>
+      </div>
+    </div>
   </div>
+  <div class="col-2">
+    <p class="lg-h">COMPANY</p>
+    <div class="footer-text">
+      <ul>
+        <li>About us</li>
+        <li>Contact us</li>
+        <li>Store locator</li>
+        <li>Book an appointment</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-3">
+    <p class="lg-h">Legal</p>
+    <div class="footer-text">
+      <ul>
+        <li>FAQs</li>
+        <li>Privacy Policy</li>
+        <li>Terms & Conditions</li>
+        <li>Payments & Shipping</li>
+        <li>Return/ Refund & Exchange</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-4">
+    <p class="lg-h">customer support</p>
+    <div class="footer-text">
+      <ul>
+        <li>Call/Whatsapp:
+          <b>+91 96500 39960, 93114 23980</b>
+        </li>
+        <li>Timings:
+          <b>11 a.m. - 8 p.m. IST | Mon - Sun</b>
+        </li>
+        <li>Email:
+          <b>online@divaniindia.in</b>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-  <div class="footer__links">
-    {% for link in section.settings.menu.links %}
-      {{ link.title | link_to: link.url }}
-    {% endfor %}
-  </div>
-
-  <div class="footer__payment">
-    {% if section.settings.show_payment_icons %}
-      {% for type in shop.enabled_payment_types %}
-        {{ type | payment_type_svg_tag }}
-      {% endfor %}
-    {% endif %}
-  </div>
-</footer>
 
 {% stylesheet %}
-  footer {
+  .footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 2rem;
+    background-color: #392a2a;
+    padding: 80px 60px;
+    font-family: "Jost"
+    , sans-serif;
+    gap: 60px;
   }
-  footer a {
-    text-decoration: none;
-    color: var(--color-foreground);
+
+  .footer .lg-h {
+    color: #FFE6C0;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
   }
-  footer .footer__links,
-  footer .footer__payment {
+
+  .footer .footer-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+
+  .footer .footer-text ul li {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #fff2df;
+    letter-spacing: 1px;
+    font-weight: 200;
+  }
+
+  .footer .footer-text ul li b {
+    font-weight: 400;
+    color: #fff2df;
+  }
+
+
+  .email {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    border-bottom: 1px solid #FFFFFF80;
+    padding: 5px 0;
+    max-width: 300px;
+    margin-bottom: 20px;
   }
+
+  .email input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff2df;
+    padding: 10px 0;
+    font-size: 13px;
+  }
+
+  .email input::placeholder {
+    color: #FFF2DF;
+    font-weight: 200;
+    opacity: 50%;
+  }
+
+  .email button {
+    background: none;
+    border: none;
+    color: #FFF2DF;
+    font-size: 13px;
+    font-family: "Jost"
+    , sans-serif;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+  }
+
+
+  .icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .icon {
+    background-color: #4E3737;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+  }
+
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4 {
+    flex: 1 1 220px;
+    min-width: 200px;
+  }
+
+  
+
+  
 {% endstylesheet %}
 
 {% schema %}
-{
-  "name": "t:general.footer",
-  "settings": [
-    {
-      "type": "link_list",
-      "id": "menu",
-      "label": "t:labels.menu"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_payment_icons",
-      "label": "t:labels.show_payment_icons",
-      "default": true
-    }
-  ]
-}
+  {
+    "name": "t:general.footer",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "t:labels.menu"
+      }, {
+        "type": "checkbox",
+        "id": "show_payment_icons",
+        "label": "t:labels.show_payment_icons",
+        "default": true
+      }
+    ]
+  }
 {% endschema %}

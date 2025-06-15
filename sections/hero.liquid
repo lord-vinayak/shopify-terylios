@@ -1,0 +1,520 @@
+{% comment %} 
+        Welcome to Shopify theme development! 
+{% endcomment %}
+
+<div class="hero-container">
+  <div class="hero-images">
+    <div class="split-row">
+      <img
+        src="{{'8effc7855091d12a30f5f3725acae38815c8327f.jpg'|asset_url}}"
+        alt=""
+        width="655px"
+        height="980px" />
+      <img
+        src="{{'d4df9f65accd0f6442a74560ec3c6ae28f40f70b.jpg'|asset_url}}"
+        alt=""
+        width="655px"
+        height="980px" />
+    </div>
+    <div class="full-row">
+      <img
+        src="{{'bf6c3bce5aff7b7696b8187d8deaf0b93d786049.jpg'|asset_url}}"
+        alt=""
+        width="1310px"
+        height="1963px" />
+    </div>
+    <div class="split-row">
+      <img
+        src="{{'5b0604c29c3a244f833d38defc7c1bae5a19a7dd.jpg'|asset_url}}"
+        alt=""
+        width="655px"
+        height="980px" />
+      <img
+        src="{{'46f6ef4f63e68e112061219f54ecf3c3f28d3baa.jpg'|asset_url}}"
+        alt=""
+        width="655px"
+        height="980px" />
+    </div>
+  </div>
+  <div class="hero-descp">
+    <div class="titles">
+      <div class="title-small">
+        <p>Sarhad</p>
+      </div>
+      <div class="title-big">
+        <p>Majestic Peacock Embellished Lehenga Ensemble</p>
+        <img
+          src="{{'Vesvsdvctor.png'|asset_url}}"
+          alt=""
+          width="15.38px"
+          height="13.33px" />
+      </div>
+    </div>
+    <div class="descp">
+      Crafted with timeless Zardosi artistry, the Majestic Peacock
+ 
+ 
+ 
+ 
+          Embellished Lehenga Ensemble narrates a royal tale of elegance and
+          grace.
+    </div>
+    <div class="prices">
+      <span class="current">₹ 67,500</span>
+      <p class="old">₹ 77,500</p>
+      <img
+        src="{{'Frame 1321315459.png'|asset_url}}"
+        alt=""
+        width="15px"
+        height="13px" />
+    </div>
+    <div class="size">
+      <div class="size-texts">
+        <span>Size:</span>
+        <div class="size-guide">
+          <img
+            src="{{'svds.png'|asset_url}}"
+            alt=""
+            width="17px"
+            height="15px" />
+          <p>size guide</p>
+        </div>
+      </div>
+      <div class="size-boxes">
+        <p>8</p>
+        <p>10</p>
+        <p>12</p>
+        <p>14</p>
+        <p>16</p>
+      </div>
+    </div>
+    <div class="shipping-info">
+      <p class="shipping-within">Ships within:</p>
+      <p class="shipping-info-time">5-6 weeks</p>
+    </div>
+    <div class="buttons">
+      <button class="add-cart">Add to cart</button>
+      <button class="customise">Customize Now</button>
+    </div>
+    <div class="help">
+      <div class="help-left">
+        <div class="wp-icon">
+          <img
+            src="{{'Frame 5189.png'|asset_url}}"
+            alt=""
+            width="19px"
+            height="19px" />
+        </div>
+        <p>Need help?</p>
+        <span>Contact us</span>
+      </div>
+      <div class="help-right">
+        <img
+          src="{{'Frame 5188.png'|asset_url}}"
+          alt=""
+          width="20px"
+          height="20px" />
+      </div>
+    </div>
+    <div class="accordion">
+        <!-- DETAILS & SPECS -->
+      <input
+        type="radio"
+        name="accordion"
+        id="section1" />
+      <label for="section1" class="accordion-label">DETAILS & SPECS</label>
+      <div class="accordion-content">
+        <p>
+          Introducing the Majestic Peacock Embellished Lehenga Ensemble—a breathtaking creation that embodies the opulence of royal Indian craftsmanship. This exquisite lehenga is adorned with intricate peacock motifs, meticulously hand-embroidered with shimmering zari and delicate sequins, evoking the grace and beauty of the regal bird.
+        </p>
+
+        <div class="specs">
+          <h4>Specifications</h4>
+          <ul>
+            <li>
+              <strong>Embroidery:</strong>
+              Pure Zardosi Handwork</li>
+            <li>
+              <strong>Primary Color:</strong>
+              Mustard Yellow</li>
+            <li>
+              <strong>Material:</strong>
+              Silk</li>
+            <li>
+              <strong>Color:</strong>
+              Jewel-tones</li>
+            <li>
+              <strong>Fabric:</strong>
+              Silk</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CARE GUIDE -->
+      <input
+        type="radio"
+        name="accordion"
+        id="section2" />
+      <label for="section2" class="accordion-label">CARE GUIDE</label>
+      <div class="accordion-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita velit, laboriosam veniam modi excepturi voluptas nesciunt, quas provident placeat laborum adipisci reprehenderit magnam qui. Non reiciendis modi quibusdam recusandae quod.
+        </p>
+      </div>
+
+      <!-- SHIPPING INFO -->
+      <input
+        type="radio"
+        name="accordion"
+        id="section3" />
+      <label for="section3" class="accordion-label">SHIPPING INFO</label>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate fugiat quae rerum quos saepe praesentium vel error. Fuga nam, libero, error blanditiis delectus quis et dolorum aspernatur quaerat, beatae obcaecati.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+  }
+
+  .hero-descp {
+    max-width: 610px;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #251b1b;
+    padding-left: 53px;
+    padding-top: 76px;
+    padding-right: 53px;
+  }
+
+  .descp {
+    width: 426px;
+    margin-top: 45px;
+    font-family: "Libre Franklin"
+    , sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #ffefd9;
+    line-height: 1.8;
+    padding-bottom: 20px;
+  }
+
+  .hero-images {
+    max-width: 1310px;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .split-row {
+    display: flex;
+    height: 100vh;
+  }
+
+  .split-row img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .full-row {
+    height: 100vh;
+  }
+
+  .full-row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .titles {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+  }
+
+  .title-small p {
+    margin: 0;
+    width: 58px;
+    height: 13px;
+    font-family: "Libre Franklin"
+    , sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #ffd1afb2;
+  }
+
+  .title-big {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 504px;
+    height: 50px;
+  }
+
+  .title-big p {
+    width: 355px;
+    font-family: "Jost"
+    , sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #ffefd9;
+    line-height: 1.5;
+  }
+
+  .prices {
+    margin-top: 70px;
+    width: 172px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .prices span {
+    color: #ffefd9;
+    font-family: "Libre Franklin"
+    , sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .prices .old {
+    color: #ffefd9;
+    font-family: "Libre Franklin"
+    , sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    text-decoration: line-through;
+    opacity: 50%;
+  }
+
+  .size {
+    margin-top: 40px;
+    width: 505px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .size-texts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffefd9;
+    font-family: "Libre Franklin"
+    , sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .size-guide {
+    width: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .size-boxes {
+    width: 296px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #ffefd9;
+    font-family: "Libre Franklin"
+    , sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .size-boxes p:hover {
+    background-color: #514641;
+  }
+
+  .size-boxes p {
+    border: 2px solid #ffefd980;
+    padding: 16px;
+  }
+
+  .shipping-info {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .shipping-info .shipping-within {
+    font-family: "Libre Franklin"
+    , sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #ffd1afb2;
+  }
+
+  .shipping-info .shipping-info-time {
+    font-family: "Libre Franklin"
+    , sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFD1AF;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons button {
+    height: 50px;
+    border-radius: 0;
+  }
+
+  .buttons .add-cart {
+    background-color: #FFEFD9;
+    border: none;
+    font-family: "Jost"
+    , sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #55362F;
+  }
+
+  .buttons .add-cart:hover{
+    background-color: #eed3aa;
+  }
+
+  .buttons .customise:hover {
+    background-color: #FFEFD9;
+    color: #251b1b;
+  }
+
+  .buttons .customise {
+    background-color: #251b1b;
+    border: 2px solid #FFEFD9;
+    font-family: "Jost"
+    , sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFEFD9;
+  }
+
+  .help {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .help .help-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Libre Franklin"
+    , sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFEFD9;
+  }
+
+  .help-left span {
+    text-decoration: underline;
+    line-height: 1.2;
+  }
+
+  .accordion {
+    font-family: sans-serif;
+    color: white;
+    background: #251b1b;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+
+  .accordion input[type="radio"] {
+    display: none;
+  }
+
+  .accordion-label {
+    display: block;
+    padding: 15px 20px;
+    cursor: pointer;
+    background: #251b1b;
+    border-top: 1px solid #333;
+    font-family: "Jost"
+    , sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: #251b1b;
+    padding: 0 20px;
+    border-top: 1px solid #333;
+  }
+
+  .accordion input:checked + .accordion-label + .accordion-content {
+    max-height: 500px;
+    padding: 20px;
+  }
+
+  .accordion-content p {
+    font-family: "Libre Franklin"
+    , sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .specs {
+    margin-top: 20px;
+  }
+
+  .specs h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #aaa;
+  }
+
+  .specs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .specs li {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px dotted #333;
+  }
+{% endstylesheet %}
+
+{% schema %}
+  {
+    "name": "Hello World",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Hello World Template",
+        "category": "Demo"
+      }
+    ]
+  }
+{% endschema %}

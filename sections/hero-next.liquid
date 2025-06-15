@@ -1,0 +1,162 @@
+<div class="hero-next" style="background-image: url('{{ '751be6dbd498783c128dddb6a06babc01973691e.png' | asset_url }}');">
+  <div class="headings">
+    <div class="h-small">
+      <p>Behind the scenes</p>
+    </div>
+    <div class="h-large">
+      <p>Behind the Regal Veil</p>
+    </div>
+  </div>
+  <div class="separator">
+    <img
+      src="{{'Union.png'|asset_url}}"
+      alt=""
+      width="auto"
+      height="auto" />
+  </div>
+  <div class="hero-next-images">
+    <div class="col-1">
+      <img
+        src="{{'Frame 1321315445.png'|asset_url}}"
+        alt=""
+        width="auto"
+        height="auto" />
+    </div>
+    <div class="col-2">
+      <img
+        src="{{'EM2018AHFP5501a copy 1.png'|asset_url}}"
+        alt=""
+        width="auto"
+        height="auto" />
+      <img
+        src="{{'EM2018AHFP5501a copy 2.png'|asset_url}}"
+        alt=""
+        width="auto"
+        height="auto" />
+    </div>
+    <div class="col-3">
+      <img
+        src="{{'ToSendDivani6 (2) 1.png'|asset_url}}"
+        alt=""
+        width="auto"
+        height="auto" />
+    </div>
+  </div>
+  <div class="hero-next-text">
+    <p>
+      Standing tall as the custodians of “zardozi”, Sarhad features archival couture, handcrafted to perfection. From hundred year old restored “jamavars” to grandmother’s “suchaa taar” weave.
+    </p>
+  </div>
+</div>
+
+{% stylesheet %}
+
+  .hero-next {
+    max-width: 1923px;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: url("751be6dbd498783c128dddb6a06babc01973691e.png"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .headings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .h-small {
+    font-family: "Jost"
+    , sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #7e6242;
+    letter-spacing: 1.2px;
+  }
+
+  .h-large {
+    text-transform: uppercase;
+    font-family: "Times New Roman"
+    , Times
+    , serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: #55362f;
+    letter-spacing: 8px;
+  }
+
+  .h-large,
+  .h-small p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .separator img {
+    margin-top: 0;
+    max-height: 8.5px;
+    max-width: 119px;
+  }
+
+  .hero-next-images {
+    margin-top: 30px;
+    max-width: 1923px;
+    max-height: 629px;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    gap: 0;
+  }
+
+  .hero-next-images .col-1 img,
+  .hero-next-images .col-3 img {
+    width: 38vw;
+    display: block;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  .hero-next-images .col-1 img {
+    position: relative;
+    left: 34px;
+  }
+
+  .hero-next-images .col-3 img {
+    position: relative;
+    right: 34px;
+  }
+
+  .hero-next-images .col-2 img {
+    width: 14vw;
+  }
+  .hero-next-images .col-2 {
+    max-height: 629px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .hero-next-text {
+    margin-top: 40px;
+    width: 605px;
+    font-family: "Jost"
+    , sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #270000;
+    text-align: center;
+    line-height: 1.6;
+    letter-spacing: 1px;
+  }
+
+{% endstylesheet %}
