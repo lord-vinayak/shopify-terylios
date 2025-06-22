@@ -1,5 +1,5 @@
 {% comment %} 
-        Welcome to Shopify theme development! 
+                Welcome to Shopify theme development! 
 {% endcomment %}
 
 <div class="hero-container">
@@ -53,15 +53,12 @@
     <div class="descp">
       Crafted with timeless Zardosi artistry, the Majestic Peacock
  
- 
- 
- 
           Embellished Lehenga Ensemble narrates a royal tale of elegance and
           grace.
     </div>
     <div class="prices">
-      <span class="current">₹ 67,500</span>
-      <p class="old">₹ 77,500</p>
+      <span class="current">₹ {{ section.settings.price }}</span>
+      <p class="old">₹ {{ section.settings.old-price }}</p>
       <img
         src="{{'Frame 1321315459.png'|asset_url}}"
         alt=""
@@ -392,7 +389,7 @@
     color: #55362F;
   }
 
-  .buttons .add-cart:hover{
+  .buttons .add-cart:hover {
     background-color: #eed3aa;
   }
 
@@ -508,8 +505,20 @@
 
 {% schema %}
   {
-    "name": "Hello World",
-    "settings": [],
+    "name": "Hero",
+    "settings": [
+      {
+        "type": "number",
+        "id": "price",
+        "label": "Enter Price",
+        "default": 1000
+      }, {
+        "type": "number",
+        "id": "old-price",
+        "label": "Enter Price",
+        "default": 10000
+      }
+    ],
     "presets": [
       {
         "name": "Hello World Template",
